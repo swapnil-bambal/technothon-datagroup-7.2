@@ -44,6 +44,18 @@ object dataProjectMain {
     return Json_fileData;
   }
 
+  def getSrcConnections(configFileData: DataFrame): DataFrame = {
+    val src_ct_df = configFileData.filter(configFileData("type") === "source").select("conectionType");
+    return src_ct_df;
+
+  }
+
+  def getTarConnections(configFileData: DataFrame): DataFrame = {
+    val tar_ct_df = configFileData.filter(configFileData("type") === "target").select("conectionType");
+    return tar_ct_df;
+
+  }
+
 
 
   def main(args: Array[String]): Unit = {
@@ -56,6 +68,11 @@ object dataProjectMain {
     if (check == "Success") {
       configFileData = readConfigFile(config_Json_file_path, file_type);
       configFileData.show();
+
+      val srcConectuonData = getSrcConnections(configFileData);
+      val tarConectuonData = getTarConnections(configFileData);
+//      srcConectuonData.show();
+//      tarConectuonData.show();
 
     }
     //

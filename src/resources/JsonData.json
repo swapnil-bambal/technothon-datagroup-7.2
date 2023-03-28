@@ -1,0 +1,17 @@
+[
+    {
+        "type": "source",
+        "conectionType": "fileSystem",
+        "filePath": "C:/Users/santu_roy/Desktop/resources/csv_files/stage_snowflake2.csv",
+        "fileType": "csv"
+    },
+    {
+        "type": "target",
+        "conectionType": "postgreSQL",
+        "userName": "postgres",
+        "password": "Postgres",
+        "dataBaseName": "demo",
+        "schemaName": "mySchema2",
+        "tableName": "acc_snow"
+    }
+]
