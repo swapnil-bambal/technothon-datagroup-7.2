@@ -1,0 +1,17 @@
+[
+    {
+        "type": "source",
+        "conectionType": "fileSystem",
+        "filePath": "D:/DataProject/src/main/resources/yellow_tripdata_2022-11.parquet",
+        "fileType": "parquet"
+    },
+    {
+        "type": "target",
+        "conectionType": "postgreSQL",
+        "userName": "postgres",
+        "password": "Postgres",
+        "dataBaseName": "demo",
+        "schemaName": "mySchema2",
+        "tableName": "acc_paraquet"
+    }
+]
