@@ -7,6 +7,15 @@ import java.io.File
 
 object dataProjectMain {
 
+  def createSparkSession(): SparkSession = {
+    val spark = SparkSession.builder()
+      .master("local[1]")
+      .appName("DataProject")
+      .getOrCreate();
+    spark.sparkContext.setLogLevel("ERROR");
+    return spark;
+  }
+
   def checkConfigFile(Json_file_path: String, file_type: String): Any = {
 
     try {
@@ -35,14 +44,7 @@ object dataProjectMain {
     return Json_fileData;
   }
 
-  def createSparkSession(): SparkSession = {
-    val spark = SparkSession.builder()
-      .master("local[1]")
-      .appName("DataProject")
-      .getOrCreate();
-    spark.sparkContext.setLogLevel("ERROR");
-    return spark;
-  }
+
 
   def main(args: Array[String]): Unit = {
 
