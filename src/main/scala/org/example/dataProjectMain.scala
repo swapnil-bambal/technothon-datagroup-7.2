@@ -58,6 +58,7 @@ object dataProjectMain {
 
 
 
+
   def main(args: Array[String]): Unit = {
 
     val spark = createSparkSession();
@@ -71,8 +72,8 @@ object dataProjectMain {
 
       val srcConectuonData = getSrcConnections(configFileData);
       val tarConectuonData = getTarConnections(configFileData);
-//      srcConectuonData.show();
-//      tarConectuonData.show();
+      srcConectuonData.show();
+      tarConectuonData.show();
 
     }
     //
