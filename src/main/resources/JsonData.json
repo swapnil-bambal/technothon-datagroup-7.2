@@ -2,16 +2,16 @@
     {
         "type": "source",
         "conectionType": "fileSystem",
-        "filePath": "D:/resources/csv_files/stage_snowflake2.csv",
+        "filePath": "D:/veh_20.csv",
         "fileType": "csv"
     },
     {
         "type": "target",
         "conectionType": "postgreSQL",
         "userName": "postgres",
-        "password": "Postgres",
+        "password": "ShubhamParate",
         "dataBaseName": "demo",
-        "schemaName": "mySchema2",
-        "tableName": "acc_snow"
+        "schemaName": "schema",
+        "tableName": "sample"
     }
 ]
