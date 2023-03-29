@@ -2,16 +2,16 @@
     {
         "type": "source",
         "conectionType": "fileSystem",
-        "filePath": "D:/DataProject/src/main/resources/yellow_tripdata_2022-11.parquet",
-        "fileType": "parquet"
+        "filePath": "D:/veh_20.csv",
+        "fileType": "csv"
     },
     {
         "type": "target",
         "conectionType": "postgreSQL",
         "userName": "postgres",
-        "password": "Postgres",
+        "password": "ShubhamParate",
         "dataBaseName": "demo",
-        "schemaName": "mySchema2",
-        "tableName": "acc_paraquet"
+        "schemaName": "schema",
+        "tableName": "sample"
     }
 ]
